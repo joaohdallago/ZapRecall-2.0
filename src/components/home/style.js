@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HomeStyle = styled.div `
+export const StyledHome = styled.div `
     height: 100vh;
     display: flex;
     flex-direction: column;

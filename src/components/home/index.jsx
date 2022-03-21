@@ -1,12 +1,12 @@
 import Logo from "../logo"
 
-import { HomeStyle } from './style'
+import { StyledHome } from './style'
 
-export default function Home() {
+export default function Home({ setPage }) {
     return (
-        <HomeStyle>
+        <StyledHome>
             <Logo/>
-            <button>Iniciar Recall!</button>
-        </HomeStyle>
+            <button onClick={() => setPage('deck')}>Iniciar Recall!</button>
+        </StyledHome>
     )
 }

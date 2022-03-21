@@ -1,14 +1,19 @@
 import ReactDOM from 'react-dom';
+import { useState } from 'react';
 
 import GlobalStyle from './theme/globalStyle';
 
 import Home from './components/home';
+import Deck from './components/deck';
 
 function App() {
+    const [page, setPage] = useState('home')
+
     return (
         <>
             <GlobalStyle />
-            <Home />
+            {page === 'home' && <Home setPage={setPage}/>}
+            {page === 'deck' && <Deck setPage={setPage}/>}
         </>
     )
 }
