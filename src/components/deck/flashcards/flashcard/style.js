@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledFlashcard = styled.li `
+    position: relative;
+
     width: 182px;
-    height: 40px;
+    height: ${props => props.isTurned ? '80px' : '40px'};
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: ${props => props.isTurned ? 'flex-start' : 'center'};
 
     padding: 5px;
 

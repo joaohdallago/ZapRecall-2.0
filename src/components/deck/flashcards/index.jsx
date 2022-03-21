@@ -2,12 +2,12 @@ import { StyledFlashcards } from "./style";
 
 import Flashcard from "./flashcard";
 
-export default function Flashcards({ deckArray }) {
+export default function Flashcards({ deckArray, answerList, setAnswerList }) {
     
 
     return (
         <StyledFlashcards>
-            {deckArray.map((flashcard, index) => <Flashcard key={index} number={index + 1}/>)}
+            {deckArray.map((flashcardData, index) => <Flashcard key={index} number={index + 1} {...{flashcardData, answerList, setAnswerList}}/>)}
         </StyledFlashcards>
     )
 }

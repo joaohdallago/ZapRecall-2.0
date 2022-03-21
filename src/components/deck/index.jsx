@@ -3,9 +3,12 @@ import { StyledDeck } from "./style";
 import Logo from "../logo";
 import Flashcards from "./flashcards";
 import DeckFooter from "./deck-footer";
+import { useState } from "react";
 
 
 export default function Deck() {
+    const [answerList, setAnswerList] = useState([])
+
     const deckArray = [
         {
             question: 'O que é JSX?',
@@ -45,14 +48,14 @@ export default function Deck() {
         {
             question: 'Usamos estado (state) para __',
             answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente'
-        },
-    ];
+        }
+    ]
     
     return (
         <StyledDeck>
             <Logo />
-            <Flashcards {...{deckArray}}/>
-            <DeckFooter {...{deckArray}}/>
+            <Flashcards {...{deckArray, answerList, setAnswerList}}/>
+            <DeckFooter {...{deckArray, answerList, setAnswerList}}/>
         </StyledDeck>
     )
 }
