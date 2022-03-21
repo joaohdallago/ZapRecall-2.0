@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledDeckFooter = styled.footer `
+    position: fixed;
+
     width: 100vw;
     height: 50px;
 
-    position: fixed;
     bottom: 0;
     left: 0;
 

@@ -55,7 +55,7 @@ export default function Deck() {
         <StyledDeck>
             <Logo />
             <Flashcards {...{deckArray, answerList, setAnswerList}}/>
-            <DeckFooter {...{deckArray, answerList, setAnswerList}}/>
+            <DeckFooter {...{deckArray, answerList}}/>
         </StyledDeck>
     )
 }

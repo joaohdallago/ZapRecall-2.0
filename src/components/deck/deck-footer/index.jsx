@@ -1,10 +1,14 @@
 import { StyledDeckFooter } from "./style";
 
+import { BsQuestionCircleFill } from 'react-icons/bs'
+import { MdCancel, MdCheckCircle } from 'react-icons/md'
 
-export default function DeckFooter({ deckArray }) {
+
+export default function DeckFooter({ deckArray, answerList }) {
     return (
         <StyledDeckFooter>
-            0/{ deckArray.length } CONCLUÍDOS
+            {answerList.length}/{deckArray.length} CONCLUÍDOS
+
         </StyledDeckFooter>
     )
 }
